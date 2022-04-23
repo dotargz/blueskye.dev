@@ -119,7 +119,10 @@ p {
     margin-left: 15%;
   }
   .nav-item {
-    margin: 1%;
+    margin: 0.1%;
+  }
+  .huww-widget {
+    display: none;
   }
 }
 
