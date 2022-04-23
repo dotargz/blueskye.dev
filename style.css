@@ -118,6 +118,9 @@ p {
   #hero {
     margin-left: 15%;
   }
+  .nav-item {
+    margin: 1%;
+  }
 }
 
 
