@@ -63,7 +63,8 @@ a {
   height: calc(100% - 120px - 91px);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  margin-top: 20px;
   width: 100%;
   border-style: solid;
   border-color: white;
