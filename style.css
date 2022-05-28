@@ -77,7 +77,6 @@ a {
   border-style: solid;
   border-color: white;
   border-width: 0px;
-  margin-left: 8%;
 }
 
 
@@ -86,8 +85,7 @@ h1 {
 }
 
 p {
-  margin-left: 1%;
-  width: 45%;
+  margin-top: 1%;
   font-family: GilorySansLight;
 }
 
