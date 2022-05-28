@@ -19,6 +19,8 @@ html {
 }
 
 #content {
+  display: flex;
+  flex-direction: column;
   color: white;
   font-family: GilorySansExtraBold;
 }
@@ -122,6 +124,9 @@ p {
     margin: 0.1%;
   }
   .huww-widget {
+    display: none;
+  }
+  iframe {
     display: none;
   }
 }
