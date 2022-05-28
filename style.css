@@ -58,7 +58,7 @@ a {
 }
 
 #page {
-  height: calc(100% - 120px);
+  height: calc(100% - 120px - 91px);
   display: flex;
   justify-content: center;
   align-items: center;
