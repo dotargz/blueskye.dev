@@ -1,0 +1,229 @@
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(/fonts/SpaceGrotesk[wght].ttf);
+}
+
+html, body {
+  font-family: SpaceGrotesk;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #111111;
+  color: #f5f5f5;
+  background-image: radial-gradient(#151515 2px, transparent 2px);
+  background-size: calc(9 * 2px) calc(9 * 2px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content2 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.header {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+#status {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+img {
+  margin-left: auto;
+  padding: 0;
+  
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+.grey {
+  color: rgba(136,136,136,1);
+}
+
+.nav-item {
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.bio {
+  width: 25rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(136,136,136,1);
+  transition:.5s;
+}
+
+a:visited {
+  color: rgba(136,136,136,1);
+}
+
+a:hover {
+  color: #f5f5f5;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 25rem;
+  height: 15rem;
+  padding-bottom: 3.5rem;
+  border-radius: 1rem;
+  background-color: #151515;
+}
+
+.project-title {
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  background-size: 400% 400%;
+  margin-top: 0.5rem;
+  animation: gradient 15s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-desc {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.project-img {
+  border-radius: 0.5rem;
+}
+
+.btn {
+  background-color: #5e60ce;
+  border-radius: 0.2rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+/* CSS */
+.btn {
+  padding: 15px 30px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.show-mobile {
+  display: none;
+}
+
