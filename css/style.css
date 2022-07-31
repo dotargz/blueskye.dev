@@ -351,7 +351,7 @@ and (orientation : portrait) {
 
 /* Desktops and laptops ----------- */
 @media only screen 
-and (min-width : 1224px) {
+and (min-width : 1080px) {
   .header {
     position: absolute;
   }
