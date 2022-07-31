@@ -226,7 +226,7 @@ a:hover, a:focus {
   text-align: center;
   padding: 1rem;
   margin-top: 1rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   background-color: #151515;
   z-index: 1;
 }
@@ -257,9 +257,19 @@ and (max-device-width : 480px) {
   }
   .content {
     margin-top: 4rem;
+    min-height: 50vh;
   }
   .content2 {
     margin-top: 8rem;
+    min-height: 50vh;
+  }
+  .project-item {
+    margin-right: 0;
+    margin-left: 0;
+    width: 21rem;
+  }
+  .bio {
+    width: 20rem;
   }
 }
 
@@ -270,10 +280,10 @@ and (min-width : 321px) {
     position: relative;
   }
   .content {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
   .content2 {
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
 }
 
@@ -285,6 +295,7 @@ and (max-width : 320px) {
   }
   .content {
     margin-top: 4rem;
+    
   }
   .content2 {
     margin-top: 8rem;
@@ -295,7 +306,15 @@ and (max-width : 320px) {
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
-/* Styles */
+  .header {
+    position: absolute;
+  }
+  .content {
+    margin-top: 0rem;
+  }
+  .content2 {
+    margin-top: 0rem;
+  }
 }
 
 /* iPads (landscape) ----------- */
@@ -303,7 +322,15 @@ and (max-device-width : 1024px) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : landscape) {
-/* Styles */
+  .header {
+    position: absolute;
+  }
+  .content {
+    margin-top: 4rem;
+  }
+  .content2 {
+    margin-top: 0rem;
+  }
 }
 
 /* iPads (portrait) ----------- */
@@ -311,7 +338,15 @@ and (orientation : landscape) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
-/* Styles */
+  .header {
+    position: absolute;
+  }
+  .content {
+    margin-top: 0rem;
+  }
+  .content2 {
+    margin-top: 0rem;
+  }
 }
 
 /* Desktops and laptops ----------- */
