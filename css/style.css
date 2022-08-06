@@ -157,20 +157,34 @@ a:hover, a:focus {
   font-weight: 700;
   margin-left: 1rem;
   margin-right: 1rem;
+  min-height: 2.1rem;
+  overflow: hidden;
 }
 
 .project-img {
   border-radius: 0.5rem;
 }
 
+.project-btn {
+  justify-content: flex-end;
+}
 
 
 
 
 
 
-
-/* CSS */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .btn {
   padding: 15px 32px;
   background-color: #2575fc;
@@ -231,8 +245,17 @@ a:hover, a:focus {
   z-index: 1;
 }
 
+
+/* Thanks Citrus Community */
 .fa-heart {
   color: #89CFF0;
+}
+
+/* OVERRIDE OF .btn!
+DO NOT MOVE */
+.p-btn {
+  margin-right: 0px;
+  margin-bottom: 0px;
 }
 
 .footer-content {
