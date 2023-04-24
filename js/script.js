@@ -11,7 +11,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // change the greeting message every 2 seconds to a random language, and animate it using js.
 const delay = (n) => new Promise((r) => setTimeout(r, n * 1000));
 const div = document.getElementById("greeting");
-const greetings = ["Hello", "Bonjour", "Hola", "Ciao", "Hallo", "Hej", "Olá", "Namaste", "Salaam", "Konnichiwa", "Nǐ hǎo", "Aloha"];
+const greetings = ["Hello", "Ahoj", "Halo", "Cześć", "Hej", "Merhaba", "Yassas", "Ciao", "Olá", "Hallå", "Bonjour", "Aloha", "Kon’nichiwa", "Zdrastĭ", "Namaste", "Sawubona", "Hola", "Nĭ Hăo", "Xin chào", "Annyeonghaseyo", "Sveiki", "Kaixo", "Hallo", "Hei", "Hujambo"];
 let i = 1;
 
 async function setgreeting() {
