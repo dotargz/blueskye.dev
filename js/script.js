@@ -13,7 +13,7 @@ const delay = (n) => new Promise((r) => setTimeout(r, n * 1000));
 const div = document.getElementById("greeting-container");
 const extra_div = document.getElementById("extra-grammar");
 // languages i know
-const greetings = ["Hello, I'm", "Hola, soy", "こにちわ、私は"];
+const greetings = ["Hello, I'm", "Hola, soy", "こんにちは、私は"];
 const extra_grammar = ["", "", "です"];
 let i = 1;
 
