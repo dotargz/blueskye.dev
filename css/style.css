@@ -2,10 +2,17 @@
 	box-sizing: border-box;
 }
 
+html {
+	background: #fff;
+	background-image: url("/img/stacked-waves-haikei.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
 html,
 body {
 	width: 100%;
-	height: fit-content;
 	font-family: "Inter", "Noto Sans JP", sans-serif;
 }
 
@@ -14,13 +21,8 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: #fff;
 	color: #333;
 	padding: 4rem 1rem;
-	background-image: url("/img/stacked-waves-haikei.svg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
 }
 
 main {
@@ -53,7 +55,7 @@ main span.greeting {
 #greeting-container,
 #extra-grammar {
 	opacity: 1;
-	transition: opacity 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
 #greeting.fade,
@@ -306,5 +308,12 @@ div.copy p {
 	div.projects-carousel {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(2, 1fr);
+	}
+}
+
+/* desktop */
+@media (min-height: 1001px) { 
+	html {
+		background-attachment: fixed;
 	}
 }
