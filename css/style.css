@@ -16,6 +16,10 @@ body {
   background: #fff;
   color: #333;
   padding: 4rem 1rem;
+  background-image: url("/img/stacked-waves-haikei.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 
