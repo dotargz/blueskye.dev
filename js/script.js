@@ -10,15 +10,21 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // change the greeting message every 2 seconds to a random language, and animate it using js.
 const delay = (n) => new Promise((r) => setTimeout(r, n * 1000));
-const div = document.getElementById("greeting");
-const greetings = ["Hello", "Ahoj", "Halo", "Cześć", "Hej", "Merhaba", "Yassas", "Ciao", "Olá", "Hallå", "Bonjour", "Aloha", "Kon’nichiwa", "Zdrastĭ", "Namaste", "Sawubona", "Hola", "Nĭ Hăo", "Xin chào", "Annyeonghaseyo", "Sveiki", "Kaixo", "Hallo", "Hei", "Hujambo"];
+const div = document.getElementById("greeting-container");
+const extra_div = document.getElementById("extra-grammar");
+// languages i know
+const greetings = ["Hello, I'm", "Hola, soy", "こにちわ、私は"];
+const extra_grammar = ["", "", "です"];
 let i = 1;
 
 async function setgreeting() {
 	div.classList.toggle("fade");
+	extra_div.classList.toggle("fade");
 	await delay(1);
 	div.innerHTML = greetings[i];
+	extra_div.innerHTML = extra_grammar[i];
 	div.classList.toggle("fade");
+	extra_div.classList.toggle("fade");
 	await delay(1);
 	if (i < greetings.length - 1) {
 		i++;
@@ -27,6 +33,7 @@ async function setgreeting() {
 	}
 	return true;
 }
+
 var getgreetings = window.setInterval(setgreeting, 3000);
 
 // lanyard.js
