@@ -34,7 +34,7 @@ async function setgreeting() {
 	return true;
 }
 
-var getgreetings = window.setInterval(setgreeting, 3000);
+var getgreetings = window.setInterval(setgreeting, 4000);
 
 // lanyard.js
 const lanyardDiv = document.querySelector(".lanyard");
