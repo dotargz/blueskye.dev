@@ -289,7 +289,7 @@ div.copy p {
     grid-template-rows: repeat(4, 1fr);
   }
   /* remove transition on hover */
-  div.projects-carousel div.project:hover {
+  div.projects-carousel div.project:hover, .lanyard:hover {
     transform: none;
   }
 }
