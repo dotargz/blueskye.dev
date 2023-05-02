@@ -14,7 +14,7 @@ const div = document.getElementById("greeting-container");
 const extra_div = document.getElementById("extra-grammar");
 // languages i know
 const greetings = ["Hello, I'm", "Hola, soy", "こんにちは、私は"];
-const extra_grammar = ["", "", "です"];
+// const extra_grammar = ["", "", "です"];
 let i = 1;
 
 async function setgreeting() {
@@ -22,9 +22,9 @@ async function setgreeting() {
 	extra_div.classList.toggle("fade");
 	await delay(1);
 	div.innerHTML = greetings[i];
-	extra_div.innerHTML = extra_grammar[i];
+	// extra_div.innerHTML = extra_grammar[i];
 	div.classList.toggle("fade");
-	extra_div.classList.toggle("fade");
+	// extra_div.classList.toggle("fade");
 	await delay(1);
 	if (i < greetings.length - 1) {
 		i++;
@@ -72,6 +72,10 @@ lanyard({
 			lanyardStatus.innerHTML = "<i class='fas fa-circle' style='color: #747f8d;'></i>";
 		}
 		lanyardAvatar.src = `https://cdn.discordapp.com/avatars/${presenceData.discord_user.id}/${presenceData.discord_user.avatar}.png`;
+		// backup image if discordapp.com is blocked or down
+		lanyardAvatar.onerror = () => {
+			lanyardAvatar.src = `https://api.dicebear.com/6.x/initials/svg?seed=BlueSkye&backgroundColor=039be5,00acc1,1e88e5,3949ab&backgroundType=gradientLinear&randomizeIds=true`;
+		};
 		lanyardUsername.innerHTML = presenceData.discord_user.username + "#" + presenceData.discord_user.discriminator;
 	} catch (e) {
 		console.log(e);
