@@ -232,6 +232,16 @@ footer {
 	overflow: hidden;
 }
 
+.lanyard__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+	height: max-content;
+	gap: 0.2rem;
+}
+
 .lanyard__info__name {
 	display: flex;
 	flex-direction: row;
@@ -240,6 +250,11 @@ footer {
 	width: max-content;
 	height: max-content;
 	gap: 0.5rem;
+}
+
+.lanyard__info__status {
+	font-size: 0.8rem;
+	font-weight: 400;
 }
 
 .lanyard .lanyard__avatar img {
@@ -312,7 +327,7 @@ div.copy p {
 }
 
 /* desktop */
-@media (min-height: 1001px) { 
+@media (min-height: 1001px) {
 	html {
 		background-attachment: fixed;
 	}

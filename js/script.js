@@ -76,7 +76,7 @@ lanyard({
 		lanyardAvatar.onerror = () => {
 			lanyardAvatar.src = `https://api.dicebear.com/6.x/initials/svg?seed=BlueSkye&backgroundColor=039be5,00acc1,1e88e5,3949ab&backgroundType=gradientLinear&randomizeIds=true`;
 		};
-		lanyardUsername.innerHTML = presenceData.discord_user.username + "#" + presenceData.discord_user.discriminator;
+		lanyardUsername.innerHTML = "@" + presenceData.discord_user.username;
 	} catch (e) {
 		console.log(e);
 		lanyardDiv.style.display = "none";
