@@ -225,13 +225,6 @@ footer {
 	transform: scale(1.05);
 }
 
-.lanyard__avatar {
-	width: 40px;
-	height: 40px;
-	border-radius: 20px;
-	overflow: hidden;
-}
-
 .lanyard__info {
 	display: flex;
 	flex-direction: column;
