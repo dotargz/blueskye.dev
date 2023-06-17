@@ -91,3 +91,27 @@ confetti.setSize(1);
 confetti.setPower(25);
 confetti.setFade(false);
 confetti.destroyTarget(false);
+
+
+
+// Pride Mode
+// if the ?pride query is present in the url, enable pride mode
+const urlParams = new URLSearchParams(window.location.search);
+let pride = urlParams.get("pride");
+// of if it is pride month
+const date = new Date();
+const month = date.getMonth();
+if (month == 5) {
+	pride = "true";
+}
+if (pride == "true" || pride == "" ) {
+	// import the pride-variables.css file
+	var link = document.createElement("link");
+	link.href = "css/pride-variables.css";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.getElementsByTagName("head")[0].appendChild(link);
+
+	// change the copyrite message
+	document.querySelector(".copy p").innerHTML = "© 2023 BlueSkye. All rights reserved. Happy Pride Month!";
+}

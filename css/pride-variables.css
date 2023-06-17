@@ -1,0 +1,11 @@
+/* Pride mode variables */
+
+:root {
+    --primary-color: #3d5cff;
+    --secondary-color: #fff;
+    --tertiary-color: #333;
+    --quaternary-color: #e7e7e7;
+
+    /* Pride mode gradient */
+    --primary-gradient: linear-gradient(180deg, #e40303 3%, #ff8c00 20%, #ffed00 33%, #008026 50%, #004dff 67%, #750787 83%);
+}
