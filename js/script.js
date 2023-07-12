@@ -98,7 +98,7 @@ confetti.destroyTarget(false);
 // if the ?pride query is present in the url, enable pride mode
 const urlParams = new URLSearchParams(window.location.search);
 let pride = urlParams.get("pride");
-// of if it is pride month
+// or if it is pride month
 const date = new Date();
 const month = date.getMonth();
 if (month == 5) {
