@@ -63,6 +63,11 @@ lanyard({
 				lanyardGame.innerHTML = "<b>Playing</b> " + name;
 			}
 			lanyardDiv.classList.add(discord_status);
+
+			// if the text of the innerHTML is over 64 characters, truncate it and add an ellipsis
+			if (lanyardGame.textContent.length > 64) {
+				lanyardGame.innerHTML = lanyardGame.innerHTML.substring(0, 64) + "...";
+			}
 		}
 
 		if (discord_status == "online") {
