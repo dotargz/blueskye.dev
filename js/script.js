@@ -56,7 +56,10 @@ lanyard({
 			const { state, details, name, assets, timestamps } = activities[activities.length - 1];
 			if (name == "Custom Status") {
 				lanyardGame.innerHTML = state;
-			} else {
+			} else if (name == "Music") {
+				lanyardGame.innerHTML = "<b>Listening to</b> " + details + " by " + state;
+			}
+			else {
 				lanyardGame.innerHTML = "<b>Playing</b> " + name;
 			}
 			lanyardDiv.classList.add(discord_status);
