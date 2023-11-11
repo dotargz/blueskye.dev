@@ -117,6 +117,8 @@ div.socials a {
 div.socials a:hover {
 	background: var(--primary-color);
 	color: var(--secondary-color);
+
+	transform: scale(1.05);
 }
 
 /* grid version (2 per row) */
@@ -167,13 +169,14 @@ div.projects-carousel div.project p {
 	font-size: 1rem;
 	font-weight: 400;
 	color: var(--tertiary-color);
+	line-height: 1.25rem;
 }
 
 /* button */
 div.projects-carousel div.project a {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	min-height: 40px;
