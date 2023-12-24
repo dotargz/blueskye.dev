@@ -121,6 +121,13 @@ div.socials a:hover {
 	transform: scale(1.05);
 }
 
+/* support svg icons */
+div.socials a img {
+	width: 1rem;
+	height: 1rem;
+	vertical-align: -0.125em;
+}
+
 /* grid version (2 per row) */
 div.projects-carousel {
 	display: grid;
@@ -293,6 +300,13 @@ div.copy p {
 	font-weight: 400;
 	color: var(--tertiary-color);
 	margin-top: 1rem;
+}
+
+/* same styling as fontawesome icons */
+img.icon {
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.125em;
 }
 
 /* media queries */

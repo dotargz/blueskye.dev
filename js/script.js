@@ -80,7 +80,7 @@ lanyard({
 			lanyardStatus.innerHTML = "<i class='fas fa-circle' style='color: #747f8d;'></i>";
 		}
 		lanyardAvatar.src = `https://cdn.discordapp.com/avatars/${presenceData.discord_user.id}/${presenceData.discord_user.avatar}.png`;
-		// backup image if discordapp.com is blocked or down
+
 		lanyardAvatar.onerror = () => {
 			lanyardAvatar.src = `https://api.dicebear.com/6.x/initials/svg?seed=BlueSkye&backgroundColor=039be5,00acc1,1e88e5,3949ab&backgroundType=gradientLinear&randomizeIds=true`;
 		};
@@ -120,6 +120,13 @@ if (pride == "true" || pride == "" ) {
 	link.rel = "stylesheet";
 	document.getElementsByTagName("head")[0].appendChild(link);
 
-	// change the copyrite message
 	document.querySelector(".copy p").innerHTML = "© 2023 BlueSkye. All rights reserved. Happy Pride Month!";
 }
+
+document.getElementById("bsky-btn").addEventListener("mouseover", function () {
+	document.getElementById("bsky-social-icon").src = "img/bsky-w.svg";
+});
+
+document.getElementById("bsky-btn").addEventListener("mouseout", function () {
+	document.getElementById("bsky-social-icon").src = "img/bsky.svg";
+});
