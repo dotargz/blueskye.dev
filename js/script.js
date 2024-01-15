@@ -58,6 +58,8 @@ lanyard({
 				lanyardGame.innerHTML = state;
 			} else if (name == "Music") {
 				lanyardGame.innerHTML = "<b>Listening to</b> " + details + " by " + state;
+			} else if (name == "Spotify") {
+				lanyardGame.innerHTML = "<b>Listening to</b> " + details + " by " + state;
 			}
 			else {
 				lanyardGame.innerHTML = "<b>Playing</b> " + name;
