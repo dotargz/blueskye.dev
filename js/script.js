@@ -54,9 +54,9 @@ lanyard({
 			lanyardGame.innerHTML = "doing nothing";
 		} else {
 			if (activities[activities.length - 1].name == "Hang Status") {
-				const { state, details, name, assets, timestamps } = activities[activities.length - 2];
+				let { state, details, name, assets, timestamps } = activities[activities.length - 2];
 			} else {
-				const { state, details, name, assets, timestamps } = activities[activities.length - 1];
+				let { state, details, name, assets, timestamps } = activities[activities.length - 1];
 			}
 			if (name == "Custom Status") {
 				lanyardGame.innerHTML = state;
