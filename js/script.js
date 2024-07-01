@@ -57,7 +57,7 @@ lanyard({
 			if (name == "Custom Status") {
 				lanyardGame.innerHTML = state;
 			} else if (name == "Hang Status") {
-				lanyardGame.innerHTML = activities[0].state;
+				lanyardGame.innerHTML = activities[activities.length - 2].state;
 			} else if (name == "Music") {
 				lanyardGame.innerHTML = "<b>Listening to</b> " + details + " by " + state;
 			} else if (name == "Spotify") {
