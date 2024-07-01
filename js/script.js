@@ -51,13 +51,13 @@ lanyard({
 		console.log(presenceData);
 		const { spotify, discord_status, activities } = presenceData;
 		if (activities.length == 0) {
-			lanyardGame.innerHTML = "Nothing";
+			lanyardGame.innerHTML = "doing nothing";
 		} else {
 			const { state, details, name, assets, timestamps } = activities[activities.length - 1];
 			if (name == "Custom Status") {
 				lanyardGame.innerHTML = state;
 			} else if (name == "Hang Status") {
-				lanyardGame.innerHTML = details;
+				lanyardGame.innerHTML = activities[0].state;
 			} else if (name == "Music") {
 				lanyardGame.innerHTML = "<b>Listening to</b> " + details + " by " + state;
 			} else if (name == "Spotify") {
