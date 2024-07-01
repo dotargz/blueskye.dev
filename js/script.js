@@ -58,7 +58,7 @@ lanyard({
 			if (activities[activities.length - 1].name == "Hang Status") {
 				console.log("skipping hang status");
 				act = activities[activities.length - 2];
-				console.log(name);
+				console.log(act.name);
 			} else {
 				console.log("no hang status?");
 				act = activities[activities.length - 1];
