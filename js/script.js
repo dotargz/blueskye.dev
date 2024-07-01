@@ -53,17 +53,18 @@ lanyard({
 		if (activities.length == 0) {
 			lanyardGame.innerHTML = "doing nothing";
 		} else {
-			const { state, details, name, assets, timestamps } = activities[activities.length - 1];
+			if (activities[activities.length - 1].name == "Hang Status") {
+				const { state, details, name, assets, timestamps } = activities[activities.length - 2];
+			} else {
+				const { state, details, name, assets, timestamps } = activities[activities.length - 1];
+			}
 			if (name == "Custom Status") {
 				lanyardGame.innerHTML = state;
-			} else if (name == "Hang Status") {
-				lanyardGame.innerHTML = activities[activities.length - 2].state;
 			} else if (name == "Music") {
 				lanyardGame.innerHTML = "<b>Listening to</b> " + details + " by " + state;
 			} else if (name == "Spotify") {
 				lanyardGame.innerHTML = "<b>Listening to</b> " + details + " by " + state;
-			}
-			else {
+			} else {
 				lanyardGame.innerHTML = "<b>Playing</b> " + name;
 			}
 			lanyardDiv.classList.add(discord_status);
