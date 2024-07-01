@@ -53,22 +53,24 @@ lanyard({
 		if (activities.length == 0) {
 			lanyardGame.innerHTML = "doing nothing";
 		} else {
+			let act;
+			// { state, details, name, assets, timestamps }
 			if (activities[activities.length - 1].name == "Hang Status") {
 				console.log("skipping hang status");
-				let { state, details, name, assets, timestamps } = activities[activities.length - 2];
+				act = activities[activities.length - 2];
 				console.log(name);
 			} else {
 				console.log("no hang status?");
-				let { state, details, name, assets, timestamps } = activities[activities.length - 1];
+				act = activities[activities.length - 1];
 			}
 			if (name == "Custom Status") {
-				lanyardGame.innerHTML = state;
+				lanyardGame.innerHTML = act.state;
 			} else if (name == "Music") {
-				lanyardGame.innerHTML = "<b>Listening to</b> " + details + " by " + state;
+				lanyardGame.innerHTML = "<b>Listening to</b> " + act.details + " by " + act.state;
 			} else if (name == "Spotify") {
-				lanyardGame.innerHTML = "<b>Listening to</b> " + details + " by " + state;
+				lanyardGame.innerHTML = "<b>Listening to</b> " + act.details + " by " + act.state;
 			} else {
-				lanyardGame.innerHTML = "<b>Playing</b> " + name;
+				lanyardGame.innerHTML = "<b>Playing</b> " + act.name;
 			}
 			lanyardDiv.classList.add(discord_status);
 
