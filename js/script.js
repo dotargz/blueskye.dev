@@ -51,18 +51,26 @@ lanyard({
 		console.log(presenceData);
 		const { spotify, discord_status, activities } = presenceData;
 		if (activities.length == 0) {
-			lanyardGame.innerHTML = "Nothing";
+			lanyardGame.innerHTML = "doing nothing";
 		} else {
-			const { state, details, name, assets, timestamps } = activities[activities.length - 1];
-			if (name == "Custom Status") {
-				lanyardGame.innerHTML = state;
-			} else if (name == "Music") {
-				lanyardGame.innerHTML = "<b>Listening to</b> " + details + " by " + state;
-			} else if (name == "Spotify") {
-				lanyardGame.innerHTML = "<b>Listening to</b> " + details + " by " + state;
+			let act;
+			// { state, details, name, assets, timestamps }
+			if (activities[activities.length - 1].name == "Hang Status") {
+				console.log("skipping hang status");
+				act = activities[activities.length - 2];
+				console.log(act.name);
+			} else {
+				console.log("no hang status?");
+				act = activities[activities.length - 1];
 			}
-			else {
-				lanyardGame.innerHTML = "<b>Playing</b> " + name;
+			if (name == "Custom Status") {
+				lanyardGame.innerHTML = act.state;
+			} else if (name == "Music") {
+				lanyardGame.innerHTML = "<b>Listening to</b> " + act.details + " by " + act.state;
+			} else if (name == "Spotify") {
+				lanyardGame.innerHTML = "<b>Listening to</b> " + act.details + " by " + act.state;
+			} else {
+				lanyardGame.innerHTML = "<b>Playing</b> " + act.name;
 			}
 			lanyardDiv.classList.add(discord_status);
 
