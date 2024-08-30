@@ -63,13 +63,16 @@ lanyard({
 				console.log("no hang status?");
 				act = activities[activities.length - 1];
 			}
-			if (name == "Custom Status") {
+			if (act.name == "Custom Status") {
 				lanyardGame.innerHTML = act.state;
-			} else if (name == "Music") {
+			} else if (act.name == "Music") {
 				lanyardGame.innerHTML = "<b>Listening to</b> " + act.details + " by " + act.state;
-			} else if (name == "Spotify") {
+			} else if (act.name == "Spotify") {
 				lanyardGame.innerHTML = "<b>Listening to</b> " + act.details + " by " + act.state;
-			} else {
+			} else if (act.name == "Code") {
+				lanyardGame.innerHTML = "<b>Coding</b> " + act.details;
+			}
+			else {
 				lanyardGame.innerHTML = "<b>Playing</b> " + act.name;
 			}
 			lanyardDiv.classList.add(discord_status);
