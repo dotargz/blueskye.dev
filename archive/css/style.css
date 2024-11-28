@@ -6,11 +6,16 @@
 
 html {
 	background: var(--secondary-color);
+	background-image: url("/img/stacked-waves-haikei.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 html,
 body {
-	font-family: "Inter", sans-serif;
+	width: 100%;
+	font-family: "Inter", "Noto Sans JP", sans-serif;
 }
 
 body {
@@ -19,8 +24,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	color: var(--tertiary-color);
-	margin-top: 2rem;
-	margin-bottom: 1rem;
+	padding: 4rem 1rem;
 }
 
 main {
@@ -30,28 +34,55 @@ main {
 	align-items: left;
 	max-width: 600px;
 	height: fit-content;
+	margin-top: 0vh;
 }
 
-main .greeting {
+main span.greeting {
 	font-size: 2rem;
-	font-weight: 900;
+	font-weight: 100;
 	margin-bottom: 0rem;
 	color: var(--tertiary-color);
+}
+
+#extra-grammar {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	width: max-content;
+	height: max-content;
+}
+
+#greeting,
+#greeting-container,
+#extra-grammar {
+	opacity: 1;
+	transition: all 0.5s ease-in-out;
+}
+
+#greeting.fade,
+#greeting-container.fade,
+#extra-grammar.fade {
+	opacity: 0;
 }
 
 h1 {
 	font-size: 3.5rem;
 	font-weight: 900;
-	margin-bottom: 1rem;
-	color: var(--primary-color);
-	font-family: "Inter", sans-serif;
+	margin-bottom: calc(1rem - 4px);
+	background: var(--primary-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: "Inter", "Noto Sans JP", sans-serif;
+	/* fix for font being cut off */
+	padding-bottom: 4px;
 }
 main p {
 	font-size: 1rem;
 	font-weight: 400;
 	margin-bottom: 1rem;
 	color: var(--tertiary-color);
-	line-height: 1.25rem;
 }
 
 div.socials {
@@ -72,6 +103,7 @@ div.socials a {
 	align-items: center;
 	width: max-content;
 	height: 40px;
+	border-radius: 20px;
 	border: var(--primary-color) 1px solid;
 	background: var(--secondary-color);
 	color: var(--primary-color);
@@ -79,11 +111,21 @@ div.socials a {
 	padding: 0 1rem;
 	gap: 0 0.5rem;
 	flex: 1;
+	transition: all 0.2s ease-in-out;
 }
 
 div.socials a:hover {
 	background: var(--primary-color);
 	color: var(--secondary-color);
+
+	transform: scale(1.05);
+}
+
+/* support svg icons */
+div.socials a img {
+	width: 1rem;
+	height: 1rem;
+	vertical-align: -0.125em;
 }
 
 /* grid version (2 per row) */
@@ -91,7 +133,9 @@ div.projects-carousel {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
-	gap: 1rem;
+	grid-gap: 1rem;
+	width: 100%;
+	height: max-content;
 	margin-top: 1rem;
 }
 
@@ -102,16 +146,23 @@ div.projects-carousel div.project {
 	align-items: left;
 	width: 100%;
 	height: 300px;
+	border-radius: 20px;
 	background: var(--secondary-color);
 	border: var(--quaternary-color) 1px solid;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
 	padding: 1rem;
 	gap: 0.5rem;
+	transition: all 0.2s ease-in-out;
+}
+
+div.projects-carousel div.project:hover {
+	transform: scale(1.05);
 }
 
 div.projects-carousel div.project img {
 	width: 100%;
 	height: 100px;
+	border-radius: 20px;
 	object-fit: cover;
 }
 
@@ -136,12 +187,14 @@ div.projects-carousel div.project a {
 	align-items: center;
 	width: 100%;
 	min-height: 40px;
+	border-radius: 20px;
 	border: var(--primary-color) 1px solid;
 	color: var(--primary-color);
 	text-decoration: none;
 	padding: 0 1rem;
 	gap: 0 0.5rem;
 	margin-top: auto;
+	transition: all 0.2s ease-in-out;
 }
 
 div.projects-carousel div.project a:hover {
@@ -173,10 +226,15 @@ footer {
 	color: var(--tertiary-color);
 	border: var(--quaternary-color) 1px solid;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+	border-radius: 20px;
 	padding: 1rem;
 
+	transition: all 0.2s ease-in-out;
 }
 
+.lanyard:hover {
+	transform: scale(1.05);
+}
 
 .lanyard__info {
 	display: flex;
@@ -206,6 +264,7 @@ footer {
 .lanyard .lanyard__avatar img {
 	width: 40px;
 	height: 40px;
+	border-radius: 20px;
 }
 
 .lanyard__info__game {
@@ -234,13 +293,6 @@ a {
 }
 
 div.copy {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    height: 100%;
-    padding-top: 1rem;
 	text-align: center;
 }
 
@@ -268,6 +320,11 @@ img.icon {
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-rows: repeat(4, 1fr);
 	}
+	/* remove transition on hover */
+	div.projects-carousel div.project:hover,
+	.lanyard:hover {
+		transform: none;
+	}
 }
 
 /* tablet */
@@ -289,9 +346,12 @@ img.icon {
 }
 
 .flag {
-	width: 70px;
+	height: 25px;
+	border-radius: 0.4rem;
+	transition: all 0.2s ease-in-out;
 }
 
 .flag:hover {
+	transform: scale(1.05);
 	cursor: pointer;
 }

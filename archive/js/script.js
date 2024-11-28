@@ -8,6 +8,34 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 	});
 });
 
+// change the greeting message every 2 seconds to a random language, and animate it using js.
+const delay = (n) => new Promise((r) => setTimeout(r, n * 1000));
+const div = document.getElementById("greeting-container");
+const extra_div = document.getElementById("extra-grammar");
+// languages i know
+const greetings = ["Hello, I'm", "Hola, soy", "こんにちは、私は"];
+// const extra_grammar = ["", "", "です"];
+let i = 1;
+
+async function setgreeting() {
+	div.classList.toggle("fade");
+	extra_div.classList.toggle("fade");
+	await delay(1);
+	div.innerHTML = greetings[i];
+	// extra_div.innerHTML = extra_grammar[i];
+	div.classList.toggle("fade");
+	// extra_div.classList.toggle("fade");
+	await delay(1);
+	if (i < greetings.length - 1) {
+		i++;
+	} else {
+		i = 0;
+	}
+	return true;
+}
+
+var getgreetings = window.setInterval(setgreeting, 4000);
+
 // lanyard.js
 const lanyardDiv = document.querySelector(".lanyard");
 const lanyardStatus = document.querySelector("div.lanyard__info__status");
@@ -84,3 +112,34 @@ confetti.setSize(1);
 confetti.setPower(25);
 confetti.setFade(false);
 confetti.destroyTarget(false);
+
+
+
+// Pride Mode
+// if the ?pride query is present in the url, enable pride mode
+const urlParams = new URLSearchParams(window.location.search);
+let pride = urlParams.get("pride");
+// or if it is pride month
+const date = new Date();
+const month = date.getMonth();
+if (month == 5) {
+	pride = "true";
+}
+if (pride == "true" || pride == "" ) {
+	// import the pride-variables.css file
+	var link = document.createElement("link");
+	link.href = "css/pride-variables.css";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.getElementsByTagName("head")[0].appendChild(link);
+
+	document.querySelector(".copy p").innerHTML = "© 2023 BlueSkye. All rights reserved. Happy Pride Month!";
+}
+
+document.getElementById("bsky-btn").addEventListener("mouseover", function () {
+	document.getElementById("bsky-social-icon").src = "img/bsky-w.svg";
+});
+
+document.getElementById("bsky-btn").addEventListener("mouseout", function () {
+	document.getElementById("bsky-social-icon").src = "img/bsky.svg";
+});

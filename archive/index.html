@@ -35,9 +35,8 @@
 		<meta name="theme-color" content="#ffffff" />
 
 		<!-- Fonts --->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.bunny.net" />
+		<link href="https://fonts.bunny.net/css?family=inter:100,200,300,400,500,600,700,800,900|noto-sans-jp:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
 		<!-- Styles -->
 		<link rel="stylesheet" href="/css/reset.css" />
 		<script src="https://kit.fontawesome.com/9cb2f2488a.js" crossorigin="anonymous"></script>
@@ -45,39 +44,39 @@
 	</head>
 	<body>
 		<main>
-			<span class="greeting">hello, i'm</span>
-			<h1>blueskye<span id="extra-grammar"></span></h1>
-			<p>i like making things, and sometimes i like breaking them. this is my personal website where i put all of my projects and other interesting things.</p>
+			<span class="greeting" id="greeting-container">Hello, I'm</span>
+			<h1>BlueSkye<span id="extra-grammar"></span></h1>
+			<p>I like making things, and sometimes I like breaking them. This is my personal website where I put all of my projects and other interesting things.</p>
 			<div class="socials">
 				<a href="https://github.com/dotargz" target="_blank"><i class="fa-brands fa-github"></i>dotargz</a>
-				<a href="https://bsky.app/profile/blueskye.dev" target="_blank"><i class="fa-brands fa-bluesky"></i>blueskye.dev</a>
-				<a href="https://discord.com/users/788887558478233650" target="_blank"><i class="fa-brands fa-discord"></i>blueskye</a>
-				<a href="https://www.youtube.com/channel/UCVTJpXenjLM6PCfmwdjMjOw" target="_blank"><i class="fa-brands fa-youtube"></i>onespark</a>
+				<a id="bsky-btn" href="https://bsky.app/profile/blueskye.dev" target="_blank"><img src="img/bsky.svg" id="bsky-social-icon" class="icon" alt="BlueSkye on BlueSky" />blueskye.dev</a>
+				<a href="https://discord.com/users/788887558478233650" target="_blank"><i class="fa-brands fa-discord"></i>BlueSkye</a>
+				<a href="https://www.youtube.com/channel/UCVTJpXenjLM6PCfmwdjMjOw" target="_blank"><i class="fa-brands fa-youtube"></i>OneSpark</a>
 			</div>
 			<div class="projects-carousel">
 				<div class="project">
-					<img src="img/rose.png" alt="rose republic" />
-					<h3>rose republic</h3>
-					<p>a discord server where u decide the government w/ elections</p>
-					<a href="https://discord.com/invite/gad9Ux2aDV" target="_blank">join the server<i class="fa-solid fa-up-right-from-square"></i></a>
+					<img src="img/roserep.png" alt="a red flag with a white circle and black rose in the center" />
+					<h3>The Rose Republic</h3>
+					<p>A discord server where YOU get to decide the government through democratic elections!</p>
+					<a href="https://discord.gg/gad9Ux2aDV" target="_blank">Join the Server<i class="fa-solid fa-up-right-from-square"></i></a>
 				</div>
 				<div class="project">
-					<img src="img/novel.png" alt="novel engine" />
-					<h3>novel engine</h3>
-					<p>a web-based low-code choose-your-own-adventure engine written in PHP</p>
-					<a href="https://github.com/dotargz/novel-engine" target="_blank">visit repository<i class="fa-solid fa-up-right-from-square"></i></a>
+					<img src="img/novel.png" alt="a pastel gradient with the words 'Novel Engine' written in a white rectangle in the center" />
+					<h3>Novel Engine</h3>
+					<p>A web-based low-code choose-your-own-adventure engine written in PHP</p>
+					<a href="https://github.com/dotargz/novel-engine" target="_blank">Visit Repository<i class="fa-solid fa-up-right-from-square"></i></a>
 				</div>
 				<div class="project">
-					<img src="img/onespark.png" alt="onespark" />
-					<h3>onespark</h3>
-					<p>my brand that i put many of my projects under. very much a work in progess</p>
-					<a href="https://onespark.dev" target="_blank">visit site<i class="fa-solid fa-up-right-from-square"></i></a>
+					<img src="img/thecrow.png" alt="a detailed graphic with 'TRUST EVERYTHING' and several funny headlines embeded along with the text 'the crow, the best news'" />
+					<h3>The Crow</h3>
+					<p>A very silly satirical news website that I wrote in PHP. It's absolutely unhinged.</p>
+					<a href="https://thecrow.buzz" target="_blank">Visit Site<i class="fa-solid fa-up-right-from-square"></i></a>
 				</div>
 				<div class="project">
-					<img src="img/soon.png" alt="Coming soon" />
-					<h3>coming soon...</h3>
-					<p>maybe its something? maybe I just want 4 items in this list... who knows?</p>
-					<a id="special-yippeeee" tabindex="0">yipeeee!<i class="fa-solid fa-fire"></i></a>
+					<img src="img/soon.png" alt="blue circles in an infinitly repeating pattern" />
+					<h3>Coming soon...</h3>
+					<p>Maybe its something? Maybe I just want 4 items in this list... who knows?</p>
+					<a id="special-yippeeee" tabindex="0">Yipeeee!<i class="fa-solid fa-fire"></i></a>
 				</div>
 			</div>
 			<footer>
@@ -97,11 +96,16 @@
 					</div>
 				</div>
 				<div class="copy">
+					<p>&copy; 2023 BlueSkye. All rights reserved. <a href="/notes.html">I love you.</a></p>
 					<img src="img/ua.svg" alt="the ukrainian flag" class="flag" onclick="window.location.href='https://u24.gov.ua/'" />
 					<img src="img/lgbtqa.svg" alt="a pride flag" class="flag" onclick="window.location.href='https://www.hrc.org/'" />
+					<img src="img/trans.svg" alt="a transgender flag" class="flag" onclick="window.location.href='https://www.thetrevorproject.org/'" />
 				</div>
+				<a href="https://femboys.love/@skye" target="_blank" style="display: none">femboys.love/@skye</a>
+				<a href="https://transfem.social/@blueskye" target="_blank" style="display: none">transfem.social/@blueskye</a>
 			</footer>
 		</main>
+		<script defer src="https://numb.xan.lol/script.js" data-website-id="83a3d319-cf9d-418d-bf71-3852a51a20c6"></script>
 		<script src="https://cdn.jsdelivr.net/gh/xaronnn/js-lanyard/lanyard.js"></script>
 		<script src="js/confetti.min.js"></script>
 		<script src="js/script.js"></script>
