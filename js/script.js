@@ -1,13 +1,3 @@
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-	anchor.addEventListener("click", function (e) {
-		e.preventDefault();
-
-		document.querySelector(this.getAttribute("href")).scrollIntoView({
-			behavior: "smooth",
-		});
-	});
-});
-
 // lanyard.js
 const lanyardDiv = document.querySelector(".lanyard");
 const lanyardStatus = document.querySelector("div.lanyard__info__status");
@@ -64,7 +54,7 @@ lanyard({
 		} else if (discord_status == "offline") {
 			lanyardStatus.innerHTML = "<i class='fas fa-circle' style='color: #747f8d;'></i>";
 		}
-		lanyardAvatar.src = `https://cdn.discordapp.com/avatars/${presenceData.discord_user.id}/${presenceData.discord_user.avatar}.png`;
+		lanyardAvatar.src = `https://cdn.discordapp.com/avatars/${presenceData.discord_user.id}/${presenceData.discord_user.avatar}.webp?size=40`;
 
 		lanyardAvatar.onerror = () => {
 			lanyardAvatar.src = `https://api.dicebear.com/6.x/initials/svg?seed=BlueSkye&backgroundColor=039be5,00acc1,1e88e5,3949ab&backgroundType=gradientLinear&randomizeIds=true`;
