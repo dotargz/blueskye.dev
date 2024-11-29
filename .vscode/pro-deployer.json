@@ -1,0 +1,24 @@
+{
+	"enableStatusBarItem": true,
+	"enableQuickPick": true,
+	"uploadOnSave": true,
+	"autoDelete": true,
+	"checkGitignore": false,
+	"activeTargets": ["My FTP"],
+	"concurrency": 5,
+	"ignore": [".git/**/*", ".vscode/**/*"],
+	"include": [],
+	"targets": [
+		{
+			"name": "My FTP",
+			"type": "ftp",
+			"host": "146.235.224.255",
+			"port": 21,
+			"user": "blueskyeapex",
+			"password": "FoChF5klVTkbeRxBfH3d",
+			"dir": "/",
+			"baseDir": "/",
+			"transferDataType": "binary"
+		}
+	]
+}
